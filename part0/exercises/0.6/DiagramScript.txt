@@ -1,0 +1,19 @@
+note over browser:
+user types message into form text field
+then clicks save
+end note
+
+browser->server: HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note_spa
+
+note over server:
+server receives form message
+appends message to JSON data
+then returns updated JSON data to browser
+end note
+
+server-->browser: JSON data
+
+note over browser:
+browser executes the event handler
+that renders notes to display
+end note
